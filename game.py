@@ -1,4 +1,4 @@
-<html><head><meta name="color-scheme" content="light dark"></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"># Minahal Aisha
+# Minahal Aisha
 # vnc9uv
 
 import pygame
@@ -39,23 +39,23 @@ def setup():
     alive = True
 
     # resetting player position
-    player_sprite_sheet = gamebox.load_sprite_sheet("player-sprite.png", 1, 6)
+    player_sprite_sheet = gamebox.load_sprite_sheet("assets/player-sprite.png", 1, 6)
     player_character = gamebox.from_image(400, 550, player_sprite_sheet[frame_player])
 
     # resetting obstacle &amp; coin placement
-    rocks = [gamebox.from_image(random.randint(50, 180), random.randint(180, 280), "rock1.png"),
-             gamebox.from_image(random.randint(370, 450), random.randint(180, 280), "rock2.png"),
-             gamebox.from_image(random.randint(670, 750), random.randint(180, 280), "rock3.png"),
-             gamebox.from_image(random.randint(50, 200), random.randint(300, 410), "rock4.png"),
-             gamebox.from_image(random.randint(300, 500), random.randint(300, 410), "rock5.png"),
-             gamebox.from_image(random.randint(570, 750), random.randint(300, 410), "rock6.png")]
-    logs = [gamebox.from_image(random.randint(50, 200), random.randint(420, 560), "log1.png"),
-            gamebox.from_image(random.randint(300, 500), random.randint(420, 480), "log2.png"),
-            gamebox.from_image(random.randint(570, 750), random.randint(420, 560), "log3.png")]
-    health_coins = [gamebox.from_image(random.randint(250, 275), random.randint(300, 410), "health-coin1.png"),
-                    gamebox.from_image(random.randint(520, 560), random.randint(420, 560), "health-coin1.png")]
-    timer_coins = [gamebox.from_image(random.randint(250, 275), random.randint(420, 560), "timer-coin.png"),
-                   gamebox.from_image(random.randint(520, 560), random.randint(300, 410), "timer-coin.png")]
+    rocks = [gamebox.from_image(random.randint(50, 180), random.randint(180, 280), "assets/rock1.png"),
+             gamebox.from_image(random.randint(370, 450), random.randint(180, 280), "assets/rock2.png"),
+             gamebox.from_image(random.randint(670, 750), random.randint(180, 280), "assets/rock3.png"),
+             gamebox.from_image(random.randint(50, 200), random.randint(300, 410), "assets/rock4.png"),
+             gamebox.from_image(random.randint(300, 500), random.randint(300, 410), "assets/rock5.png"),
+             gamebox.from_image(random.randint(570, 750), random.randint(300, 410), "assets/rock6.png")]
+    logs = [gamebox.from_image(random.randint(50, 200), random.randint(420, 560), "assets/log1.png"),
+            gamebox.from_image(random.randint(300, 500), random.randint(420, 480), "assets/log2.png"),
+            gamebox.from_image(random.randint(570, 750), random.randint(420, 560), "assets/log3.png")]
+    health_coins = [gamebox.from_image(random.randint(250, 275), random.randint(300, 410), "assets/health-coin1.png"),
+                    gamebox.from_image(random.randint(520, 560), random.randint(420, 560), "assets/health-coin1.png")]
+    timer_coins = [gamebox.from_image(random.randint(250, 275), random.randint(420, 560), "assets/timer-coin.png"),
+                   gamebox.from_image(random.randint(520, 560), random.randint(300, 410), "assets/timer-coin.png")]
 
     # redrawing obstacles
     for rock in rocks:
@@ -70,32 +70,32 @@ def setup():
 
 
 # drawing stationary items
-background = gamebox.from_image(400, 300, "background.jpgw")
+background = gamebox.from_image(400, 300, "assets/background.jpg")
 finish_line = gamebox.from_color(400, 148, "red", 800, 2)
 stationary_items = [background, finish_line]
 
 # these are stationary items that get randomized placement every time
-rocks = [gamebox.from_image(random.randint(50, 180), random.randint(180, 280), "rock1.png"),
-         gamebox.from_image(random.randint(370, 450), random.randint(180, 280), "rock2.png"),
-         gamebox.from_image(random.randint(670, 750), random.randint(180, 280), "rock3.png"),
-         gamebox.from_image(random.randint(50, 200), random.randint(300, 410), "rock4.png"),
-         gamebox.from_image(random.randint(300, 500), random.randint(300, 410), "rock5.png"),
-         gamebox.from_image(random.randint(570, 750), random.randint(300, 410), "rock6.png")]
-logs = [gamebox.from_image(random.randint(50, 200), random.randint(420, 560), "log1.png"),
-        gamebox.from_image(random.randint(300, 500), random.randint(420, 480), "log2.png"),
-        gamebox.from_image(random.randint(570, 750), random.randint(420, 560), "log3.png")]
-health_coins = [gamebox.from_image(random.randint(250, 275), random.randint(300, 410), "health-coin1.png"),
-                gamebox.from_image(random.randint(520, 560), random.randint(420, 560), "health-coin1.png")]
-timer_coins = [gamebox.from_image(random.randint(250, 275), random.randint(420, 560), "timer-coin.png"),
-               gamebox.from_image(random.randint(520, 560), random.randint(300, 410), "timer-coin.png")]
+rocks = [gamebox.from_image(random.randint(50, 180), random.randint(180, 280), "assets/rock1.png"),
+         gamebox.from_image(random.randint(370, 450), random.randint(180, 280), "assets/rock2.png"),
+         gamebox.from_image(random.randint(670, 750), random.randint(180, 280), "assets/rock3.png"),
+         gamebox.from_image(random.randint(50, 200), random.randint(300, 410), "assets/rock4.png"),
+         gamebox.from_image(random.randint(300, 500), random.randint(300, 410), "assets/rock5.png"),
+         gamebox.from_image(random.randint(570, 750), random.randint(300, 410), "assets/rock6.png")]
+logs = [gamebox.from_image(random.randint(50, 200), random.randint(420, 560), "assets/log1.png"),
+        gamebox.from_image(random.randint(300, 500), random.randint(420, 480), "assets/log2.png"),
+        gamebox.from_image(random.randint(570, 750), random.randint(420, 560), "assets/log3.png")]
+health_coins = [gamebox.from_image(random.randint(250, 275), random.randint(300, 410), "assets/health-coin1.png"),
+                gamebox.from_image(random.randint(520, 560), random.randint(420, 560), "assets/health-coin1.png")]
+timer_coins = [gamebox.from_image(random.randint(250, 275), random.randint(420, 560), "assets/timer-coin.png"),
+               gamebox.from_image(random.randint(520, 560), random.randint(300, 410), "assets/timer-coin.png")]
 
 # drawing the player
-player_sprite_sheet = gamebox.load_sprite_sheet("player-sprite.png", 1, 6)
+player_sprite_sheet = gamebox.load_sprite_sheet("assets/player-sprite.png", 1, 6)
 player_character = gamebox.from_image(400, 550, player_sprite_sheet[frame_player])
 
 # drawing the doll
-doll = gamebox.from_image(400, 80, "doll.png")
-doll_facing_front = gamebox.from_image(402, 40, "dollhead.png")
+doll = gamebox.from_image(400, 80, "assets/doll.png")
+doll_facing_front = gamebox.from_image(402, 40, "assets/dollhead.png")
 
 # drawing the timer
 time_left = 60
@@ -108,7 +108,7 @@ def game_over():
     This function draws the game over screen.
     :return: None
     """
-    game_over_image = gamebox.from_image(400, 300, "game-over-sign.jpg")
+    game_over_image = gamebox.from_image(400, 300, "assets/game-over-sign.jpg")
     camera.draw(game_over_image)
 
 
@@ -180,13 +180,13 @@ def tick(keys):
             for rock in rocks:
                 if player_character.touches(rock):
                     health -= 10
-                    if health &lt; 0:
+                    if health < 0:
                         game_over()
                         alive = False
             for log in logs:
                 if player_character.touches(log):
                     health -= 10
-                    if health &lt; 0:
+                    if health < 0:
                         game_over()
                         alive = False
 
@@ -230,8 +230,8 @@ def tick(keys):
                 camera.draw(doll)
 
             # winning
-            if player_character.y &lt; 118:
-                win_screen = gamebox.from_image(400, 300, "win-screen.jpg")
+            if player_character.y < 118:
+                win_screen = gamebox.from_image(400, 300, "assets/win-screen.jpg")
                 camera.draw(win_screen)
                 alive = False
         else:  # if the player looses the game and they want to restart
@@ -239,7 +239,7 @@ def tick(keys):
                 alive = True
                 setup()
     else:  # this code runs if the game has just been started and it displays the start screen
-        start_screen_image = gamebox.from_image(400, 300, "starting-screen.jpg")
+        start_screen_image = gamebox.from_image(400, 300, "assets/starting-screen.jpg")
         camera.draw(start_screen_image)
         if pygame.K_m in keys:
             game_start = True
@@ -274,8 +274,8 @@ gamebox.timer_loop(10, tick)
     # https://i.postimg.cc/w38npX3j/health-coin1.png
 # timer_coin.png
     # https://i.postimg.cc/G2Bc3j3F/timer-coin.png
-# background.jpgw
-    # https://i.postimg.cc/J4r2bzJg/background.jpgw
+# background.jpg
+    # https://i.postimg.cc/J4r2bzJg/background.jpg
 # doll.png
     # https://i.postimg.cc/sDHw793Q/doll.png
 # dollhead.png
@@ -285,4 +285,4 @@ gamebox.timer_loop(10, tick)
 # win_screen.jpg
     # https://i.postimg.cc/J0njzvDT/win-screen.jpg
 # starting-screen.jpg
-    # https://i.postimg.cc/Hnb1VYJz/starting-screen.jpg</pre></body></html>
+    # https://i.postimg.cc/Hnb1VYJz/starting-screen.jpg
