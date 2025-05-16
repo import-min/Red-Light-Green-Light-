@@ -100,7 +100,7 @@ doll_facing_front = gamebox.from_image(402, 40, "assets/dollhead.png")
 
 # drawing the timer
 time_left = 60
-timer = gamebox.from_text(775, 30, str(time_left), 50, "dark gray")
+timer = gamebox.from_text(775, 30, str(time_left), 50, "dark gray")timer = gamebox.from_text(775, 30, str(time_left), "Arial", 50, "dark gray", False, False)
 
 
 # drawing the game over screen
@@ -139,7 +139,7 @@ def update_timer():
     timer_tracker += 1
     if timer_tracker % 10 == 0:
         time_left -= 1
-        timer = gamebox.from_text(775, 30, str(time_left), 50, "dark gray")
+        timer = gamebox.from_text(775, 30, str(time_left), "Arial", 50, "dark gray", False, False)
     camera.draw(timer)
 
 
