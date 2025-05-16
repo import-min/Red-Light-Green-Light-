@@ -18,7 +18,7 @@ Welcome to **Red Light, Green Light!**, a Squid Game–inspired mini-game built 
 
 - 🐍 **Python 3.6+**
 - 🕹️ **[Pygame](https://www.pygame.org/)**
-- 📦 **[Gamebox](https://github.com/cosinekitty/gamebox)** (2D game framework built on top of Pygame)
+- 📦 **[Gamebox]** (2D game framework built on top of Pygame)
 
 ---
 
