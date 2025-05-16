@@ -34,4 +34,4 @@ Welcome to **Red Light, Green Light!**, a Squid Game–inspired mini-game built 
 3. **Make sure you have gamebox.py in the same directory or install it manually.**
 4. **Run the game**
    ```bash
-   python gamebox.py
+   python redlight.py
