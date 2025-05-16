@@ -35,7 +35,8 @@ def setup():
     health = 100
     timer_tracker = 0
     time_left = 60
-    timer = gamebox.from_text(775, 30, str(time_left), 50, "dark gray")
+    timer = gamebox.from_text(775, 30, str(time_left), "Arial", 50, "dark gray", False, False)
+
     alive = True
 
     # resetting player position
